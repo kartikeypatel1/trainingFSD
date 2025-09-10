@@ -4,13 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .kartikey{
+            border:2px solid red ;
+            height: 200px;
+            width: 200px;
+            background-color: brown;
+        }
+        .btn{
+
+        }
+    </style>
 </head>
 <body>
+    <div class="kartikey">
+        <button class="btn" onclick="example()">click me</button>
+        <p id="aaa"></p>
+    </div>
     <script>
-        function abse(){
-            document.write("hi we are student of abes");
+        // function abse(){
+        //     document.write("hi we are student of abes");
+        // }
+        // abse();
+
+
+        // function add( a, b){
+        //     document.write(a+b);
+        // }
+        // function subtract(a, b){
+        //     document.write(a-b);
+        // }
+        // add(5,6);
+        // document.write(" ");
+        // subtract(10,6);
+        function example(){
+            document.querySelector("#aaa").innerHTML="<h1>Hello Kartikey</h1>";
         }
-        abes();
+
     </script>
 </body>
 </html>
