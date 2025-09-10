@@ -1,0 +1,181 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+        .navbar {
+            background: #12bed4;
+            color: #fff;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-logo {
+            width: 32px;
+            height: 32px;
+            margin-right: 12px;
+        }
+        .navbar-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        .card {
+            background: #fff;
+            padding: 32px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            text-align: center;
+            min-width: 300px;
+        }
+        .counter-value {
+            font-size: 2.5rem;
+            margin: 24px 0;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+        .counter-btn {
+            font-size: 2rem;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 8px;
+            background: #1976d2;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .counter-btn:active {
+            background: #1565c0;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="navbar">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Logo" class="navbar-logo">
+        <span class="navbar-title">Counter App</span>
+    </div>
+
+  
+    <div class="center-container">
+        <div class="card">
+            <div class="counter-value" id="counter">0</div>
+            <div class="btn-group">
+                <button class="counter-btn" id="decrement">-</button>
+                <button class="counter-btn" id="increment">+</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const counterEl = document.getElementById('counter');
+        const incrementBtn = document.getElementById('increment');
+        const decrementBtn = document.getElementById('decrement');
+        let count = 0;
+        const MAXLIMIT = 10;
+        const MINLIMIT=0;
+
+        incrementBtn.addEventListener('click', () => {
+            if (count < LIMIT) {
+                count++;
+                counterEl.textContent = count;
+            } else {
+                alert('Counter limit exceeded! Maximum is 10.');
+            }
+        });
+
+        decrementBtn.addEventListener('click', () => {
+            if (count > 0) {
+                count--;
+                counterEl.textContent = count;
+            }else{
+                alert(`Counter limit minimized! minimum is 0`);
+            }
+        });
+    </script>
+</body>
+</html> -->
+<!-- image hider -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Hide & Change Demo</title>
+    <style>
+        .box {
+            border: 2px solid #1976d2;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            display: inline-block;
+            text-align: center;
+            background: #f4f4f4;
+        }
+        .img-box {
+            cursor: pointer;
+        }
+        .btn {
+            padding: 8px 16px;
+            background: #12bed4;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="createHideBox" class="btn">Create "Hide Image" Box</button>
+    <div id="container"></div>
+
+    <div class="box img-box" id="changeImgBox">
+        <img id="changeImg" src="https://images.unsplash.com/photo-1756728207483-cd934b34e360?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMnx8fGVufDB8fHx8fA%3D%3D" alt="Image" width="100">
+        <div>Click this box to change image</div>
+    </div>
+
+    <script>
+        // Hide Image Box
+        document.getElementById('createHideBox').onclick = function() {
+            const container = document.getElementById('container');
+            container.innerHTML = `
+                <div class="box">
+                    <img id="hideImg" src="https://images.unsplash.com/photo-1755119902709-a53513bcbedc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D" alt="Image" width="100">
+                    <br>
+                    <button class="btn" id="hideBtn">Hide Image</button>
+                </div>
+            `;
+            document.getElementById('hideBtn').onclick = function() {
+                document.getElementById('hideImg').style.display = 'none';
+            };
+        };
+
+        // Change Image Box
+        const imgArr = [
+            "https://plus.unsplash.com/premium_photo-1721994124206-72a30b904249?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1756747840495-a1248bfac910?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8",
+            "https://images.unsplash.com/photo-1757372429884-92e02350c5d9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8"
+        ];
+        let imgIdx = 0;
+        document.getElementById('changeImgBox').onclick = function() {
+            imgIdx = (imgIdx + 1) % imgArr.length;
+            document.getElementById('changeImg').src = imgArr[imgIdx];
+               };
+    </script>
+</body>
+</html>
