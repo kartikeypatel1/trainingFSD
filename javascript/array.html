@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="id"></p>
+    <script>
+        // const numbers =new Array("car","bus","bike","cycle");
+        // document.getElementById("id").innerHTML=numbers;
+
+   const students = {
+  student1: {
+    firstName: "John",
+    age: 18,
+    class: "10th"
+  },
+  student2: {
+    firstName: "Doe",
+    age: 19,
+    class: "11th"
+  },
+  student3: {
+    firstName: "Smith",
+    age: 20,
+    class: "12th"
+  }
+};
+
+        document.getElementById("id").innerHTML=students.student1.firstName;
+        // document.getElementById("id").innerHTML=students.student2.age;
+        // document.getElementById("id").innerHTML=students.student3.class;     
+    </script>
+</body>
+</html>
