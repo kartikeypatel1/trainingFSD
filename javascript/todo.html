@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo list</title>
+    <style>
+        .outer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 400px;
+            background-color: rgb(23, 236, 240);
+            padding: 40px;
+            border: 2px solid rgb(1, 23, 27);
+        }
+        input{
+            padding: 2px;
+            border: 2px solid rgb(7, 88, 115);
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+        }
+        button{
+            border: 2px solid rgb(7, 88, 115);
+            width: 75px;
+            height: 35px;
+            border-radius: 5px;
+            background-color: blue;
+            color: white;
+        }
+        h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(58, 15, 146);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+   <div>
+    <center><h1>TODO LIST</h1></center>
+    <input class="place" type="text" placeholder="Enter your Task">
+    <button class="btn">Add Task</button>
+   </div>
+   <ul class="list"></ul>
+   </div>
+    <script>
+    let btn = document.querySelector(".btn");
+    let input = document.querySelector(".place");
+    let list = document.querySelector(".list");
+
+    btn.addEventListener("click", () => {
+      let taskText = input.value.trim();
+
+      if (taskText === "") {
+        alert("Please enter a task!");
+        return;
+      }
+      let li = document.createElement("li");
+      li.textContent = taskText;
+      let delBtn = document.createElement("button");
+      delBtn.textContent = "deleted";
+      delBtn.style.marginLeft = "10px";
+
+      delBtn.addEventListener("click", () => {
+        li.remove();
+      });
+
+      li.appendChild(delBtn);
+      list.appendChild(li);
+      input.value = "";
+    });
+    </script>
+</body>
+</html>

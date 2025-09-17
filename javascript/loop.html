@@ -19,12 +19,9 @@
         // }while(a<=10);
 
 
- let start = parseInt(prompt("Enter start number: "));
-
-
+let start = parseInt(prompt("Enter start number: "));
 let even = "even = ";
 let odd = "odd = ";
-
 for (let i = 1; i <= 10; i++) {
   if (((i*start) % 2) === 0) {
     even += i*start + " ";
@@ -32,12 +29,6 @@ for (let i = 1; i <= 10; i++) {
     odd += i*start + " ";
   }
 }
-
-// // Agar console me run karna hai
-// document.write(even.trim());
-// document.write(odd.trim());
-
-// Agar HTML page par dikhana hai
 document.write(even + "<br>");
 document.write(odd);
 
