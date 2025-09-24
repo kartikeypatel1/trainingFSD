@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let x = 10;
+       if (x === 10) {  
+              let y = 20; 
+              document.write(`Inside block: x = ${x}, y = ${y}<br>`); 
+         }
+         document.write(`Outside block: x = ${x}<br>`);
+            // The following line would cause an error because y is not defined outside the block
+            // document.write(`Outside block: y = ${y}<br>`);
+                
+    </script>
+</body>
+</html>
