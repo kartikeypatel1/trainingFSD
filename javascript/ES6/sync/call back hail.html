@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getdata(dataid,getnextdata){
+            setTimeout(() => {
+                console.log("Data",dataid);
+                if(getnextdata){
+                    getnextdata();
+                }
+            }, 4000);
+         
+        }
+           getdata(10 ,() => {
+               getdata(20,() => {
+                   getdata(30,() => {
+                       getdata(40);
+                   })
+               })
+            });
+            
+    </script>
+</body>
+</html>
