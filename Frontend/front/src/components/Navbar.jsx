@@ -1,13 +1,13 @@
 import React from 'react'
 import './navbar.css'
-function Navbar() {
+function Navbar(props) {
   return (
     <div id='nav'>
       <ul>
-        <li>LOGO</li>
-        <li>home</li>
-        <li>about</li>
-        <li>contact</li>
+        <li>{props.LOGO}</li>
+        <li>{props.HOME}</li>
+        <li>{props.contact}</li>
+        <li>{props.about}</li>
         
       </ul>
     </div>
