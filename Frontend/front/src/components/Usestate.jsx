@@ -4,7 +4,10 @@ import './usestate.css'
 function Usestate() {
 
     const change=()=>{
-        alert("Button Clicked")
+       for(let i=0;i<5;i++){
+        document.write(i);
+       }
+
     }
   return (
     <div>
