@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from './components/Card'
 import Navbar from './components/Navbar'
+import Usestate from './components/Usestate'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Card name="Kartikey Patel"/>
       <br />
       <Card name="hello Patel"/>
+      <Usestate></Usestate>
     </div>
   )
 }
