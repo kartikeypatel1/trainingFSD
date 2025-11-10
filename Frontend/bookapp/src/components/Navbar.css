@@ -1,0 +1,53 @@
+.navbar {
+  background-color: #007bff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  cursor: pointer;
+  position: relative;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Hover animation (underline slide) */
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav-links li:hover {
+  color: #ffe600;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
