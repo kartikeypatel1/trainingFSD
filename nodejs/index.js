@@ -53,4 +53,7 @@ const fs=require('fs');
 //     }});
 // fs.appendFile("./it-b.txt","we added one more line using the async method",()=>{});
 // fs.writeFileSync("./a1.txt","we are student of  it-a class");
-fs.cpSync("./a1.txt","./a2.txt");
+
+// fs.cpSync("./a1.txt","./a2.txt");
+
+fs.unlinkSync("./a2.txt");
