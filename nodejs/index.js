@@ -27,6 +27,11 @@
 
 
 
+// const fs=require('fs');
+// // fs.writeFileSync("./it-a.txt","we are student of  it-a class");
+// // fs.writeFileSync("./ABES.txt","this is the file of the abes engineering college");
+// const result=fs.readFileSync("./it-a.txt","utf-8");
+// console.log(result);
+
 const fs=require('fs');
-// fs.writeFileSync("./it-a.txt","we are student of  it-a class");
-fs.writeFileSync("./ABES.txt","this is the file of the abes engineering college")
+fs.writeFile("./it-b.txt","we are student of  it-a class",()=>{});
