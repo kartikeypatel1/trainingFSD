@@ -34,4 +34,23 @@
 // console.log(result);
 
 const fs=require('fs');
-fs.writeFile("./it-b.txt","we are student of  it-a class",()=>{});
+// fs.writeFile("./it-b.txt","we are student of  it-a class",()=>{});
+// fs.readFile("./it-b.txt","utf-8",(err,result)=>{
+//     if(err){
+//         console.log(err);
+//     }    else{
+//         console.log(result);
+//     }
+// });
+
+// fs.appendFileSync("./it-b.txt","and i am in 3rd year");
+
+// fs.appendFile("./it-b.txt","now we append the more data using thr async",(err)=>{
+//     if(err){
+//         console.log(err);
+//     }else{
+//         console.log("data is appended");
+//     }});
+// fs.appendFile("./it-b.txt","we added one more line using the async method",()=>{});
+// fs.writeFileSync("./a1.txt","we are student of  it-a class");
+fs.cpSync("./a1.txt","./a2.txt");
